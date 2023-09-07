@@ -12,7 +12,7 @@ namespace API_REST_NETCore_6.Controllers.OperacionMatematica
 
         #region OPERECIONES MATEMATICAS METODO GET
         // GET api/<OperacionMatematicaController>/5/10/15
-        [HttpGet("{TipoOperacion}/{ValoA}/{ValorB}")]
+        [HttpGet("{TipoOperacion}/{ValorA}/{ValorB}")]
         public string Get(int TipoOperacion, double ValorA, double ValorB)
         {
             double resultado = 0;
@@ -32,7 +32,7 @@ namespace API_REST_NETCore_6.Controllers.OperacionMatematica
             if (TipoOperacion == 3)
             {
                 //MULTIPLICACION DE 2 VALORES
-                resultado = ValorA + ValorB;
+                resultado = ValorA * ValorB;
             }
 
             if (TipoOperacion == 4)

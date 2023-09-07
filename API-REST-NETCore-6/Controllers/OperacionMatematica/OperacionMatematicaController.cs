@@ -16,33 +16,41 @@ namespace API_REST_NETCore_6.Controllers.OperacionMatematica
         public string Get(int TipoOperacion, double ValorA, double ValorB)
         {
             double resultado = 0;
-
-            if (TipoOperacion == 1) 
+            try 
             {
-                //SUMA DE 2 VALORES
-                resultado = ValorA + ValorB;
+
+                if (TipoOperacion == 1)
+                {
+                    //SUMA DE 2 VALORES
+                    resultado = ValorA + ValorB;
+                }
+
+                if (TipoOperacion == 2)
+                {
+                    //RESTA DE 2 VALORES
+                    resultado = ValorA - ValorB;
+                }
+
+                if (TipoOperacion == 3)
+                {
+                    //MULTIPLICACION DE 2 VALORES
+                    resultado = ValorA * ValorB;
+                }
+
+                if (TipoOperacion == 4)
+                {
+                    //DIVISION DE 2 VALORES
+                    resultado = ValorA / ValorB;
+                }
+
+                
             }
-
-            if (TipoOperacion == 2)
+            catch(Exception ex)
             {
-                //RESTA DE 2 VALORES
-                resultado = ValorA - ValorB;
-            }
-
-            if (TipoOperacion == 3)
-            {
-                //MULTIPLICACION DE 2 VALORES
-                resultado = ValorA * ValorB;
-            }
-
-            if (TipoOperacion == 4)
-            {
-                //DIVISION DE 2 VALORES
-                resultado = ValorA / ValorB;
+                Console.WriteLine(ex.Message);
             }
 
             return resultado.ToString();
-
         }
         #endregion
         #region OPERACIONES MATEMATICAS METODO POST
@@ -50,28 +58,35 @@ namespace API_REST_NETCore_6.Controllers.OperacionMatematica
         [HttpPost("{TipoOperacion}")]
         public string Post(int TipoOperacion, [FromBody] OperacionMatematicaVariablesViewModel x)
         {
-            if (TipoOperacion == 1)
+            try
             {
-                //SUMA DE 2 VALORES
-                x.Resultado = x.ValorA + x.ValorB;
-            }
+                if (TipoOperacion == 1)
+                {
+                    //SUMA DE 2 VALORES
+                    x.Resultado = x.ValorA + x.ValorB;
+                }
 
-            if (TipoOperacion == 2)
-            {
-                //RESTA DE 2 VALORES
-                x.Resultado = x.ValorA - x.ValorB;
-            }
+                if (TipoOperacion == 2)
+                {
+                    //RESTA DE 2 VALORES
+                    x.Resultado = x.ValorA - x.ValorB;
+                }
 
-            if (TipoOperacion == 3)
-            {
-                //MULTIPLICACION DE 2 VALORES
-                x.Resultado = x.ValorA * x.ValorB;
-            }
+                if (TipoOperacion == 3)
+                {
+                    //MULTIPLICACION DE 2 VALORES
+                    x.Resultado = x.ValorA * x.ValorB;
+                }
 
-            if (TipoOperacion == 4)
+                if (TipoOperacion == 4)
+                {
+                    //DIVISION DE 2 VALORES
+                    x.Resultado = x.ValorA / x.ValorB;
+                }
+            }
+            catch(Exception ex)
             {
-                //DIVISION DE 2 VALORES
-                x.Resultado = x.ValorA / x.ValorB;
+                Console.WriteLine(ex.Message);
             }
 
             return x.Resultado.ToString();

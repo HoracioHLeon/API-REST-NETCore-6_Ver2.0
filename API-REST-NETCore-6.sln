@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API-REST-NETCore-6", "API-REST-NETCore-6\API-REST-NETCore-6.csproj", "{7780C67B-A0FA-43A4-9291-6B342C06A180}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core", "Core\Core.shproj", "{E8C25946-68D0-4D91-84FC-38C169CC3B99}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Models", "Models\Models.shproj", "{4724D052-95FC-4658-924C-945C7D3A5759}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7780C67B-A0FA-43A4-9291-6B342C06A180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7780C67B-A0FA-43A4-9291-6B342C06A180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7780C67B-A0FA-43A4-9291-6B342C06A180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7780C67B-A0FA-43A4-9291-6B342C06A180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1146E579-2625-499D-8626-FACB111C349F}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Models\Models.projitems*{4724d052-95fc-4658-924c-945c7d3a5759}*SharedItemsImports = 13
+		Core\Core.projitems*{7780c67b-a0fa-43a4-9291-6b342c06a180}*SharedItemsImports = 5
+		Models\Models.projitems*{7780c67b-a0fa-43a4-9291-6b342c06a180}*SharedItemsImports = 5
+		Core\Core.projitems*{e8c25946-68d0-4d91-84fc-38c169cc3b99}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
